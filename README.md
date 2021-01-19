@@ -64,6 +64,7 @@
 ## git与GitHub
 
 在本地已经init的时候
+
 1 `git remote add origin(别名) github的http` 链接到github，*此时可能需要输入邮箱密码*
 
 2 `git push -u origin 分支名` 想远程推送这个分支
