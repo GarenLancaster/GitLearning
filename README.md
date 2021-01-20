@@ -74,10 +74,16 @@
 3 `git clone github的http` 所有分支都被拉下来了，虽然只显示了master
 
 ## rebase
-
+### 基本操作
 进行4次commit，产生4个版本，rebase将后面3个版本合成为一个版本
 
 `git rebase  -i HEAD~3` 完成合并，此后将出现要修改的文件，将文件中出第二版以外的pick改成s，保存退出,接着出现commit信息文件，修改commit内容接着退出。
 
-rebase还可以将branch并入，简化流程
+### rebase还可以将branch并入，简化流程
 
+在dev分支执行 `git reabse main` 就能将dev接入main
+
+接着转到main `git merge dev` 完成合并，此时main和dev在一条分支上
+
+### 其他应用
+先fetch到库，再将远程的rebase到本地就嫩避免pull产生的分支合并 *感觉没啥软用*
