@@ -1,10 +1,15 @@
 # GitLearning
 学git用的
 
+有序号的按照序号做，没序号的看看、自取
+
 ## 配置
-先安装git，然后创建一个用来管理的文件夹，至少放3个文档
+1 先安装git，win下安装时一直下一步就ok了，其他系统的用命令行
+
+2 创建一个用来管理的文件夹，至少放3个文档
 
 ## git入门管理
+管理一个文件并实现做出第一个版本
 
 1 在要管理的文件夹右键->git.bash
 
@@ -74,10 +79,17 @@
 3 `git clone github的http` 所有分支都被拉下来了，虽然只显示了master
 
 ## rebase
-
+### 基本操作
 进行4次commit，产生4个版本，rebase将后面3个版本合成为一个版本
 
 `git rebase  -i HEAD~3` 完成合并，此后将出现要修改的文件，将文件中出第二版以外的pick改成s，保存退出,接着出现commit信息文件，修改commit内容接着退出。
 
-rebase还可以将branch并入，简化流程
+### rebase还可以将branch并入，简化流程
 
+在dev分支执行 `git reabse main` 就能将dev接入main
+
+接着转到main `git merge dev` 完成合并，此时main和dev在一条分支上
+
+### 其他应用
+-先fetch到库，再将远程的rebase到本地就嫩避免pull产生的分支合并 *感觉没啥软用*
+-如果产生冲突，手动解决后执行`git add .`接着`git rebase --continue`完成rebase
