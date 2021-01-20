@@ -56,7 +56,7 @@
 
 7 `git merge dev` 合并dev和已修复bug的master，*此时可能产生冲突，这时要手动修改冲突部分*
 
-## git工作流
+#### git工作流
 至少用两个branch，master和dev
 
 只能在dev开发，master保存正式发行版
@@ -72,3 +72,12 @@
 从远程获取，先进入克隆的文件夹
 
 3 `git clone github的http` 所有分支都被拉下来了，虽然只显示了master
+
+## rebase
+
+进行4次commit，产生4个版本，rebase将后面3个版本合成为一个版本
+
+`git rebase  -i HEAD~3` 完成合并，此后将出现要修改的文件，将文件中出第二版以外的pick改成s，保存退出,接着出现commit信息文件，修改commit内容接着退出。
+
+rebase还可以将branch并入，简化流程
+
