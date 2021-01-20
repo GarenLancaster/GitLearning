@@ -91,9 +91,17 @@
 接着转到main `git merge dev` 完成合并，此时main和dev在一条分支上
 
 ### 其他应用
-<<<<<<< HEAD
--先fetch到库，再将远程的rebase到本地就嫩避免pull产生的分支合并 *感觉没啥软用*
--如果产生冲突，手动解决后执行`git add .`接着`git rebase --continue`完成rebase
-=======
-先fetch到库，再将远程的rebase到本地就嫩避免pull产生的分支合并 *感觉没啥软用*
->>>>>>> main
+- 先fetch到库，再将远程的rebase到本地就嫩避免pull产生的分支合并 *感觉没啥软用*
+- 如果产生冲突，手动解决后执行`git add .`接着`git rebase --continue`完成rebase
+
+## 冲突解决
+使用beyond compare工具（外部工具），自动定位冲突快速解决冲突
+
+安装，并在git配置**只在当期repo有效**
+```
+git config --local merge.tool bc3
+git config --local mergetool.path  '安装路径'
+git config --local mergetool.keepBackup false //取消备份，可选
+```
+
+出现冲突时 `git mergetool` ，解决之
