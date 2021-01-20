@@ -91,5 +91,9 @@
 接着转到main `git merge dev` 完成合并，此时main和dev在一条分支上
 
 ### 其他应用
+<<<<<<< HEAD
 -先fetch到库，再将远程的rebase到本地就嫩避免pull产生的分支合并 *感觉没啥软用*
 -如果产生冲突，手动解决后执行`git add .`接着`git rebase --continue`完成rebase
+=======
+先fetch到库，再将远程的rebase到本地就嫩避免pull产生的分支合并 *感觉没啥软用*
+>>>>>>> main
