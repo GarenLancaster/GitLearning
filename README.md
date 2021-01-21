@@ -8,7 +8,7 @@
 
 2 创建一个用来管理的文件夹，至少放3个文档
 
-## git入门管理
+## Git入门管理
 管理一个文件并实现做出第一个版本
 
 1 在要管理的文件夹右键->git.bash
@@ -66,7 +66,7 @@
 
 只能在dev开发，master保存正式发行版
 
-## git与GitHub
+## Git与GitHub
 
 在本地已经init的时候
 
@@ -78,7 +78,7 @@
 
 3 `git clone github的http` 所有分支都被拉下来了，虽然只显示了master
 
-## rebase
+## Rebase，变基
 ### 基本操作
 进行4次commit，产生4个版本，rebase将后面3个版本合成为一个版本
 
@@ -119,9 +119,30 @@ git config --local mergetool.keepBackup false //取消备份，可选
 + 首次测试`git checkout -b release`，在release分支进行测试
 + 用Pull Requested合并到main或者Merge到main
 
-## 为其他开源软件做贡献
+## Fork，为其他开源软件做贡献
 1 在其他团队项目中进行fork，就在自己仓库得到这份克隆
 
 2 在自己仓库对改代码改进，完成后提交到自己的仓库（二次开发）
 
 3 给原作者提交改进申请，在自己库主页提交一个Pull Requested，等待原作者回复
+
+## 其他关于Git的知识
+### 配置文件
+git找配置先找local再找global最后找system
+
++ 项目配置文件 对它的配置只作用于当前的项目,/.git/config `git config --local 配置内容`
++ 全局配置文件 对它的配置会作用于所有项目,~/.git/config  `git config --global 配置内容`
++ 系统配置文件（要root权限）,/etc/.gitconfig            `git config --system 配置内容`
+### 免密登录
+- git自动管理，不用管，个人用最方便
+- URL，修改地址https://用户名:密码@github.com/其他.../项目.git （主要过去每次push都要输用户和密码，实现与现在push相同功能）
+- SSH，生成公钥（企业用的最多）
+-- 1 在PC生成公钥和私钥`ssh-keygen `，在~/.ssh 目录下id_rsa.pub公钥、id_rsa私钥
+-- 2 在Github页面，在个人的setting里面的SSH添加那段码
+-- 3在项目中配置ssh地址,`git remote add origin ssh的地址git@...`
+### gitignore
+让git忽略一些文件
+
+创建一个叫.gitignore文件，在里面输入文件名，该文件就会被忽略，文件名可以bash的语法（父目录作用于子目录，子目录不作用于父：file/*.h时，./的\*.h不会忽略）
+### 放置issues、wiki
+用于团队提问题、接问题
