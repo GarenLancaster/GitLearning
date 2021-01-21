@@ -105,3 +105,17 @@ git config --local mergetool.keepBackup false //取消备份，可选
 ```
 
 出现冲突时 `git mergetool` ，解决之
+
+## 多人合作
+1 在dev进行创建分支并切换`git checkout -b branchname`，完成开发
+
+2 开发完成后，进行review，使用Pull/Merge Requested
+
+- 首先，管理员进行配置，进入Github页面，找到Setting的Branches界面，选好dev，按条件选其他，提交即可。
+- 接着，开发人员在Code界面提交Pull Requested，选好将哪个分支并入dev并填好其他信息。
+- 最后，管理员在网站就能看到，在add-review检查，完成后返回并允许合并。（可以用bash命令形式拉到本地进行，详细看网站那提供的命令）
+
+3 完成后进行测试，最后再发布到main
++ 首次测试`git checkout -b release`，在release分支进行测试
++ 用Pull Requested合并到main或者Merge到main
+
