@@ -137,9 +137,12 @@ git找配置先找local再找global最后找system
 - git自动管理，不用管，个人用最方便
 - URL，修改地址https://用户名:密码@github.com/其他.../项目.git （主要过去每次push都要输用户和密码，实现与现在push相同功能）
 - SSH，生成公钥（企业用的最多）
--- 1 在PC生成公钥和私钥`ssh-keygen `，在~/.ssh 目录下id_rsa.pub公钥、id_rsa私钥
--- 2 在Github页面，在个人的setting里面的SSH添加那段码
--- 3在项目中配置ssh地址,`git remote add origin ssh的地址git@...`
+
+   1 在PC生成公钥和私钥`ssh-keygen `，在~/.ssh 目录下id_rsa.pub公钥、id_rsa私钥
+   
+   2 在Github页面，在个人的setting里面的SSH添加那段码
+
+   3在项目中配置ssh地址,`git remote add origin ssh的地址git@...`
 ### gitignore
 让git忽略一些文件
 
