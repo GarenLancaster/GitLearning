@@ -115,7 +115,7 @@ git config --local mergetool.keepBackup false //取消备份，可选
 - 接着，开发人员在Code界面提交Pull Requested，选好将哪个分支并入dev并填好其他信息。
 - 最后，管理员在网站就能看到，在add-review检查，完成后返回并允许合并。（可以用bash命令形式拉到本地进行，详细看网站那提供的命令）
 
-3 完成后进行测试，最后再发布到main
+3 完成后进行测试，最后再发布到main，一次开发完成
 + 首次测试`git checkout -b release`，在release分支进行测试
 + 用Pull Requested合并到main或者Merge到main
 
