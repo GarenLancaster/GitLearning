@@ -119,3 +119,9 @@ git config --local mergetool.keepBackup false //取消备份，可选
 + 首次测试`git checkout -b release`，在release分支进行测试
 + 用Pull Requested合并到main或者Merge到main
 
+## 为其他开源软件做贡献
+1 在其他团队项目中进行fork，就在自己仓库得到这份克隆
+
+2 在自己仓库对改代码改进，完成后提交到自己的仓库（二次开发）
+
+3 给原作者提交改进申请，在自己库主页提交一个Pull Requested，等待原作者回复
