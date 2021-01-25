@@ -1,3 +1,5 @@
+# 插个问题
+谁知GitKraken怎么换头像，我的分支全是默认头像，但是右上角是换过的别的头像。有知道的git友能在Issue提一下？
 # GitLearning
 学git用的
 
@@ -139,7 +141,7 @@ git找配置先找local再找global最后找system
 - SSH，生成公钥（企业用的最多）
 
    1 在PC生成公钥和私钥`ssh-keygen `，在~/.ssh 目录下id_rsa.pub公钥、id_rsa私钥
-   
+
    2 在Github页面，在个人的setting里面的SSH添加那段码
 
    3在项目中配置ssh地址,`git remote add origin ssh的地址git@...`
