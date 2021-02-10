@@ -1,5 +1,3 @@
-# 插个问题
-谁知GitKraken怎么换头像，我的分支全是默认头像，但是右上角是换过的别的头像。有知道的git友能在Issue提一下？
 # GitLearning
 学git用的
 
