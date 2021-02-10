@@ -151,3 +151,10 @@ git找配置先找local再找global最后找system
 创建一个叫.gitignore文件，在里面输入文件名，该文件就会被忽略，文件名可以bash的语法（父目录作用于子目录，子目录不作用于父：file/*.h时，./的\*.h不会忽略）
 ### 放置issues、wiki
 用于团队提问题、接问题
+
+### LFS 大文件提交和管理
+管理大文件可以使用LFS，被管理文件记录在.git/.gitattributes
+
+`git lfs track [文件名|文件夹]`，使LFS追踪这个文件或文件夹
+
+`git lfs track`展示以追踪的文件，或`git lfs ls-file`显示特定文件是否被追踪
