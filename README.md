@@ -68,6 +68,8 @@
 
 ## Git与GitHub
 
+使用Github时，单个文件超过100M不能上传，多用.gitignore文件忽略不必要的大文件。
+
 在本地已经init的时候
 
 1 `git remote add origin(别名) github的http` 链接到github，*此时可能需要输入邮箱密码*
